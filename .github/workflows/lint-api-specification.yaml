@@ -1,0 +1,20 @@
+name: lint API specification
+
+on:
+  push:
+    paths:
+    - api-specification/src/**/*.yaml
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install dependencies
+        run: npm install
+      - name: Lint OAS
+        run: npx spectral lint api-specification/src/openapi.yaml
