@@ -16,5 +16,5 @@ jobs:
           node-version: 14
       - name: Install dependencies
         run: npm install
-      - name: Lint OAS
-        run: npx spectral lint api-specification/src/openapi.yaml
+      - name: Lint OpenAPI specification files
+        run: npm run oas:lint
