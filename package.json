@@ -7,6 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
+    "oas:bundle-yaml": "openapi bundle --output api-specification/openapi.yaml api-specification/src/openapi.yaml",
     "oas:lint": "spectral lint api-specification/src/openapi.yaml",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/MelvLee/api-design-first-playground#readme",
   "devDependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.58",
     "@stoplight/spectral-cli": "^6.0.0",
     "husky": "^7.0.2"
   }
