@@ -6,6 +6,7 @@ on:
     - "lint API specification"
     types:
     - completed
+  workflow_dispatch:
 
 jobs:
   static-security-scan:

@@ -4,6 +4,7 @@ on:
   push:
     paths:
     - api-specification/src/**/*.yaml
+  workflow_dispatch:
 
 jobs:
   lint:
