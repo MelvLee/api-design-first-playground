@@ -1,0 +1,16 @@
+required:
+- name
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    type: string
+    pattern: ^\w{3,50}$
+    minLength: 3
+    maxLength: 50
+    example: doggie
+  status:
+    $ref: 'Status.yaml'
+additionalProperties: false

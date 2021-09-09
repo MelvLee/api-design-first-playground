@@ -1,0 +1,12 @@
+name: status
+in: query
+description: Status values that need to be considered for filter
+required: true
+style: form
+explode: true
+schema:
+  type: array
+  items:
+    $ref: '../schemas/Status.yaml'
+  minItems: 1
+  maxItems: 3

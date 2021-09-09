@@ -2,4 +2,6 @@ openapi: 3.0.3
 info:
   title: API Design First Playground
   version: 1.0.0
-paths: {}
+paths:
+  /pets/findByStatus:
+    $ref: 'paths/FindPetsByStatus.yaml'
